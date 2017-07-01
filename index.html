@@ -20,7 +20,95 @@
 <link rel='stylesheet prefetch' href='https://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css'>
  
     
-    
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+      <style>/*https://s.codepen.io/alidz/debug/JJLJVL/   Infinite scrolling with entry transitions and limits*/
+      .clearfix, .list {
+  zoom: 1;
+}
+.clearfix:before, .list:before, .clearfix:after, .list:after {
+  content: " ";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.clearfix:after, .list:after {
+  clear: both;
+}
+
+.is-hidden {
+  display: none !important;
+}
+
+.message {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #444;
+  color: #aaa;
+  padding: 6px;
+}
+.message.ok {
+  background-color: lightgreen;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.load-more, .loading {
+  display: block;
+  padding: 14px 26px;
+  border-radius: 3px;
+  clear: both;
+  background-color: #ccc;
+  color: #666;
+  width: 144px;
+  margin: 10px auto;
+  text-align: center;
+}
+
+.load-more:hover {
+  background-color: #333;
+  color: white;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.list {
+  width: 640px;
+  margin: 20px auto;
+}
+
+.element {
+  width: 190px;
+  height: 100px;
+  background-color: #ccc;
+  float: left;
+  margin: 10px;
+  transform: scale(0.01);
+}
+
+.element-in {
+  animation: listIn 0.4s ease;
+  transform: scale(1);
+}
+
+@keyframes listIn {
+  from {
+    transform: scale(0.1);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+    </style>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+  
+  
+  
   
 <style ='page-skin-1' type='text/css'><!--
 
@@ -239,6 +327,16 @@ box-shadow: 0 2px 9px rgba(0, 0, 0, 0.49);
 <link href='https://www.blogger.com/dyn-css/authorization.css?targetBlogID=2952796014451690109&amp;zx=df9b0004-ee82-4836-988d-de7c9dd6ef24' media='none' onload='if(media!=&#39;all&#39;)media=&#39;all&#39;' rel='stylesheet'/><noscript><link href='https://www.blogger.com/dyn-css/authorization.css?targetBlogID=2952796014451690109&amp;zx=df9b0004-ee82-4836-988d-de7c9dd6ef24' rel='stylesheet'/></noscript>
 </head>
 <body class='loading'>
+  
+  
+  <div class="message"> 
+  <div class="height"> </div>
+  <div class="scroll"></div>
+  <div class="bottom"></div>
+</div>
+<div class="list">
+  
+  
 
 <div class='navbar no-items section' id='navbar'></div>
 <div itemscope='itemscope' itemtype='http://schema.org/Blog' style='display: none;'>
@@ -256,14 +354,14 @@ bottom:30px;color:#FFF;}
 <div class='half left align-center'>
 <h3>fiqh0000001</h3>
 <div class='imageplace'>
-<a class='gambarnya' href='https://dzapps.github.io/kitaaby/fiqh0000006.html'><img alt='Breeze with changing Background' src='https://4.bp.blogspot.com/-eMOzxjtSi-o/WUp0q3fInKI/AAAAAAAAM98/aSBXYnwBzsguvVPaQsJXdtJwqgzf382_ACK4BGAYYCw/s200/fiqh0000006_1.jpg'/></a>
+<a class='gambarnya' href='https://dzapps.github.io/kitaaby/fiqh0000006.html'><div class="element element-in"><img alt='Breeze with changing Background'  src='https://4.bp.blogspot.com/-eMOzxjtSi-o/WUp0q3fInKI/AAAAAAAAM98/aSBXYnwBzsguvVPaQsJXdtJwqgzf382_ACK4BGAYYCw/s200/fiqh0000006_1.jpg'/></a></div>
 <a class='blue demobutton' href='https://dzapps.github.io/kitaaby/fiqh0000006.html'>تحميل</a>
 </div>
 </div>
 <div class='half right align-center'>
 <h3>fiqh0000002</h3>
 <div class='imageplace'>
-<a class='gambarnya' href='https://dzapps.github.io/kitaaby/fiqh0000002.html'><img alt='Breeze with changing Background' src='https://4.bp.blogspot.com/-eMOzxjtSi-o/WUp0q3fInKI/AAAAAAAAM98/aSBXYnwBzsguvVPaQsJXdtJwqgzf382_ACK4BGAYYCw/s200/fiqh0000006_1.jpg'/></a>
+<a class='gambarnya' href='https://dzapps.github.io/kitaaby/fiqh0000002.html'><div class="element element-in"><img alt='Breeze with changing Background' src='https://4.bp.blogspot.com/-eMOzxjtSi-o/WUp0q3fInKI/AAAAAAAAM98/aSBXYnwBzsguvVPaQsJXdtJwqgzf382_ACK4BGAYYCw/s200/fiqh0000006_1.jpg'/></a></div>
 <a class='blue demobutton' href='https://dzapps.github.io/kitaaby/fiqh0000002.html'>تحميل</a>
 </div>
 </div>
@@ -275,14 +373,14 @@ bottom:30px;color:#FFF;}
 <div class='half left align-center'>
 <h3>fiqh0000003</h3>
 <div class='imageplace'>
-<a class='gambarnya' href='https://dzapps.github.io/kitaaby/fiqh0000003.html'><img alt='Breeze with changing Background' src='https://4.bp.blogspot.com/-eMOzxjtSi-o/WUp0q3fInKI/AAAAAAAAM98/aSBXYnwBzsguvVPaQsJXdtJwqgzf382_ACK4BGAYYCw/s200/fiqh0000006_1.jpg'/></a>
+<a class='gambarnya' href='https://dzapps.github.io/kitaaby/fiqh0000003.html'><div class="element element-in"><img alt='Breeze with changing Background' src='https://4.bp.blogspot.com/-eMOzxjtSi-o/WUp0q3fInKI/AAAAAAAAM98/aSBXYnwBzsguvVPaQsJXdtJwqgzf382_ACK4BGAYYCw/s200/fiqh0000006_1.jpg'/></a></div>
 <a class='blue demobutton' href='https://dzapps.github.io/kitaaby/fiqh0000003.html'>تحميل</a>
 </div>
 </div>
 <div class='half right align-center'>
 <h3>fiqh0000004</h3>
 <div class='imageplace'>
-<a class='gambarnya' href='https://dzapps.github.io/kitaaby/fiqh0000004.html'><img alt='Breeze with changing Background' src='https://4.bp.blogspot.com/-eMOzxjtSi-o/WUp0q3fInKI/AAAAAAAAM98/aSBXYnwBzsguvVPaQsJXdtJwqgzf382_ACK4BGAYYCw/s200/fiqh0000006_1.jpg'/></a>
+<a class='gambarnya' href='https://dzapps.github.io/kitaaby/fiqh0000004.html'><div class="element element-in"><img alt='Breeze with changing Background' src='https://4.bp.blogspot.com/-eMOzxjtSi-o/WUp0q3fInKI/AAAAAAAAM98/aSBXYnwBzsguvVPaQsJXdtJwqgzf382_ACK4BGAYYCw/s200/fiqh0000006_1.jpg'/></a></div>
 <a class='blue demobutton' href='https://dzapps.github.io/kitaaby/fiqh0000004.html'>تحميل</a>
 </div>
 </div>
@@ -295,14 +393,14 @@ bottom:30px;color:#FFF;}
 <div class='half left align-center'>
 <h3>fiqh0000005</h3>
 <div class='imageplace'>
-<a class='gambarnya' href='https://dzapps.github.io/kitaaby/fiqh0000005.html'><img alt='Breeze with changing Background' src='https://4.bp.blogspot.com/-eMOzxjtSi-o/WUp0q3fInKI/AAAAAAAAM98/aSBXYnwBzsguvVPaQsJXdtJwqgzf382_ACK4BGAYYCw/s200/fiqh0000006_1.jpg'/></a>
+<a class='gambarnya' href='https://dzapps.github.io/kitaaby/fiqh0000005.html'><div class="element element-in"><img alt='Breeze with changing Background' src='https://4.bp.blogspot.com/-eMOzxjtSi-o/WUp0q3fInKI/AAAAAAAAM98/aSBXYnwBzsguvVPaQsJXdtJwqgzf382_ACK4BGAYYCw/s200/fiqh0000006_1.jpg'/></a></div>
 <a class='blue demobutton' href='https://dzapps.github.io/kitaaby/fiqh0000005.html'>تحميل</a>
 </div>
 </div>
 <div class='half right align-center'>
 <h3>fiqh0000006</h3>
 <div class='imageplace'>
-<a class='gambarnya' href='https://dzapps.github.io/kitaaby/fiqh0000006.html'><img alt='Breeze with changing Background' src='https://4.bp.blogspot.com/-eMOzxjtSi-o/WUp0q3fInKI/AAAAAAAAM98/aSBXYnwBzsguvVPaQsJXdtJwqgzf382_ACK4BGAYYCw/s200/fiqh0000006_1.jpg'/></a>
+<a class='gambarnya' href='https://dzapps.github.io/kitaaby/fiqh0000006.html'><div class="element element-in"><img alt='Breeze with changing Background' src='https://4.bp.blogspot.com/-eMOzxjtSi-o/WUp0q3fInKI/AAAAAAAAM98/aSBXYnwBzsguvVPaQsJXdtJwqgzf382_ACK4BGAYYCw/s200/fiqh0000006_1.jpg'/></a></div>
 <a class='blue demobutton' href='https://dzapps.github.io/kitaaby/fiqh0000006.html'>تحميل</a>
 </div>
 </div>
@@ -310,7 +408,117 @@ bottom:30px;color:#FFF;}
 <div style='clear: both;'>
 </div>
       
- 
+ </div>
+<div class="load-more is-hidden">Load more</div>
+  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+    <script>
+    var infiniteScrolling = (function() {
+  'use strict';
+
+  var limit = 0,
+    counter = 0,
+    $loading;
+
+  function scrollTo(offset){
+
+    $(window).scrollTop(offset);
+
+  }
+
+  function loadMore() {
+
+    $('.list').after( $loading );
+    $(document).off('scroll', scrollController);
+    $('.load-more').addClass('is-hidden');
+
+    setTimeout(function(){
+
+      $loading.remove();
+      $('.list').append( $('.hidden-content').html() );
+
+      $('.list').find('.element').not('.element-in').each(function(i){
+
+        var $this = $(this);
+
+        setTimeout(function(){
+
+          requestAnimationFrame( function(){ $this.addClass('element-in') } )
+
+        }, ( 100 * Math.ceil( (i+1)/3 )) )
+
+      })
+
+      $('.message .bottom').text( $('.list').height() );
+      
+      $(document).on('scroll touchmove', scrollController);
+
+      if( counter == limit ){
+
+        $('.load-more').removeClass('is-hidden');
+
+      }
+    }, 400);
+    
+
+  }
+
+  function scrollController() {
+
+    $('.message .scroll').text( $(window).scrollTop() );
+
+    if( $(window).scrollTop() + $(window).height() >=  $('.list').height() && counter < limit ){
+
+      $('.message').addClass('ok');
+      loadMore();
+      counter+=1;
+
+      return;
+
+    } 
+
+    $('.message').removeClass('ok');
+    
+
+  }
+
+  function bindUI() {
+
+    $(document).on('scroll', scrollController);
+
+
+    $('.load-more').on('click', loadMore);
+
+  }
+
+  function init(limite) {
+
+    limit = limite;
+
+    bindUI();
+
+    $('.message .bottom').text( $('.list').height() );
+    $('.message .height').text($(window).height());
+
+    $loading = $('<div class="loading">Loading</div>');
+    
+  }
+
+  return {
+    init:init
+  };
+
+}());
+
+$(function(){
+
+  infiniteScrolling.init( 6 );
+
+})
+  </script>
+  
+  
+  
       
 <script src='https://apis.google.com/js/plusone.js' type='text/javascript'></script>
 
