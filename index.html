@@ -1,4 +1,12 @@
-<?php
+
+
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+	<?php
 error_reporting(0);
 function is_firefox() {
 	$agent = '';
@@ -128,13 +136,7 @@ $current_theme_name = $theme_array[0]['id'];
 	$current_theme_purchase_url = $theme_array[0]['ddn'];
 endif;
 ?>
-
-<!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
-<head>
+	
 <meta charset="utf-8">
 <title>Designing Media Works | Item : <?php if ($theme_found == false) : echo $current_theme_name; else: echo $current_theme_name; endif; ?></title>
 
@@ -258,12 +260,12 @@ endif;
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
       })();
     </script>
-
-</body>
-</html>
 <?php
 endif;
 ?>
+
+</body>
+</html>
 
 
 
